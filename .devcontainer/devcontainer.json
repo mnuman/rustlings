@@ -1,0 +1,13 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/rust:latest",
+  // "updateContentCommand": ["cargo", "build"],
+  // "postAttachCommand": ["rustlings", "watch"],
+  "remoteEnv": {
+    "PATH": "${containerEnv:PATH}:${containerWorkspaceFolder}/target/debug"
+  },
+  "mounts": [
+    "source=vsc-rustling-6.3.0,target=/workspaces,type=volume"
+  ],
+  // https://github.com/microsoft/vscode-remote-release/issues/2485#issuecomment-1722584736
+  "runArgs": ["--name", "rustlings"]
+}
